@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta characterset="UTF-8">
+
+<head>
+    <title>home </title>
+
+    <style>
+        .main {
+            /* background-color: rgb(123, 217, 222); */
+            background-image: url("./c.jpg");
+            font-family: 'Anton', sans-serif;
+
+            font-family: 'Luckiest Guy', cursive;
+
+            font-family: 'Aclonica', sans-serif;
+        }
+
+        .contactMain {
+            /* background-color: rgb(0, 0, 0); */
+        }
+
+        section.contactMain h1,
+        section.contactMain p {
+            color: #381f1f;
+        }
+
+
+        .formContainer {
+            /* background-color: rgba(103, 94, 152, 0.71); */
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-control {
+            margin-bottom: 20px;
+        }
+
+        .formField {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        textarea.formField {
+            padding-top: 5px;
+        }
+
+        footer {
+            /* background-color: rgb(0, 0, 0);     */
+            margin-top: 100px;
+            color: #fff;
+            padding-bottom: 40px;
+        }
+
+        footer h2 {
+            padding-bottom: 5px;
+            border-bottom: solid color:#fff;
+        }
+
+        footer p {
+
+            font-size: 16px;
+        }
+
+        .socialLink a {
+
+            color: black;
+            font-size: 18px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            background-color: white;
+            border-radius: 50%;
+            padding-top: 10px;
+        }
+
+        .form-control {
+            text-align: center;
+            padding: 100px;
+        }
+
+        .formContainer button {
+            opacity: 0.7;
+        }
+
+        .one {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .socialLink a:hover {
+            text-decoration: none;
+            transition: 2s;
+            transform: scale(1.1);
+            opacity: 0.5;
+        }
+
+        .button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .t {
+            font-size: 80px;
+        }
+
+        .searchBar {
+            align: right;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 900px;
+
+
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Aclonica|Anton|Luckiest+Guy" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+</head>
+
+<body class="main">
+    <!-- <input class="searchBar" id="function_filter" placeholder="Search here.." autofocus="" type="text" style="align:right"> -->
+
+    <div id="header">
+        <form action="/search" method="post" class="searchBar">
+            <input type="text" name="search" class="search"><input type="submit" value="search" class="button1">
+        </form>
+        <div class="clear"></div>
+        <section class="contactMain">
+            <div images saved v class="container one">
+                <p class="t">Share Your Stories with Us..</p>
+                <p>Society is like a large piece of frozen water; and skating well is the great art of social life.</p><br>
+            </div>
+        </section>
+
+
+        <!-- <form action="#" >
+  <input type="file" name="pic" accept="image/*">
+  <button class="btn btn-primary" >Upload</button>
+</form> -->
+
+
+
+        <form action="/uploads" method="POST" enctype="multipart/form-data" class="formContainer">
+            <h2>Select an image to upload:</h2>
+            <br/>
+            <input type="file" name="fileName">
+            <br/>
+            <br/>
+
+
+
+            <br/>
+            <br/>
+            <input type="submit" value="Upload Image" class="button">
+            <h1 id='uploadProgress'></h1>
+        </form>
+
+        <!-- <form action="/search" method="GET" enctype="multipart/form-data">
+        <button type="submit"> for all images saved yet  </button>
+      </form> -->
+
+        <form action="/recent" method="GET" enctype="multipart/form-data" class="formContainer">
+            <button type="submit" class="button"> Recent images </button>
+        </form>
+
+
+        <!--delete buttton -->
+        <form action="/del" method="post" class="formContainer">
+            <input type="text" name="del" class="del"><button type="submit" class="button">delete </button>
+        </form>
+
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+
+                    <strong>Follow Us</strong>
+                    <hr></hr>
+                    <div class="socialLink">
+                        <p>
+                            <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                            <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                            <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                            <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
+                            <a href="#" class="fa fa-google-plus" aria-hidden="true"></a>
+                            <a href="#" class="fa fa-skype" aria-hidden="true"></a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
